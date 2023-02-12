@@ -34,7 +34,8 @@ function Phrase(content) {
   // }
   // #2
   this.letters = function letters() {
-    return (this.content.match(/[a-z]/gi) || []).join("");
+    let letterRegEx = /[a-z]/gi;
+    return (this.content.match(letterRegEx) || []).join("");
   }
 
   // Returns true if the phrase is a palindrome, false otherwise.
