@@ -17,22 +17,6 @@ function Phrase(content) {
   // Returns the letters in the content.
   // For example:
   //   new Phrase("Hello, world!").letters() === "Helloworld"
-  // #1
-  // this.letters = function letters() {
-  //   let theLetters = [];
-  //   const letterRegex = /[a-z]/i;
-  //   Array.from(this.content).forEach((character) => {
-  //     if (character.match(letterRegex)) {
-  //       theLetters.push(character);
-  //     }
-  //   });
-  //   return theLetters.join("");
-  // }
-  // #2
-  // this.letters = function letters() {
-  //   return Array.from(this.content).filter( c => c.match(/[a-z]/gi)).join("");
-  // }
-  // #2
   this.letters = function letters() {
     let letterRegEx = /[a-z]/gi;
     return (this.content.match(letterRegEx) || []).join("");
